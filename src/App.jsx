@@ -2,6 +2,7 @@
 import './App.css';
 import styled from 'styled-components';
 import { useGetSampleDataQuery } from './sampleDataApi';
+import PieChart from './components/pieChart/PieChart';
 
 const StyledAppDiv = styled.div`
   display: flex;
@@ -31,7 +32,7 @@ const StyledRadioButtonDiv = styled.div`
 `;
 
 const StyledPieChartDiv = styled.div`
-  background-color: red;
+  background-color: lightGrey;
   height: 100%;
 `;
 
@@ -62,11 +63,11 @@ const StyledPieInformationdiv = styled.div`
 function App() {
   const { data, error, isLoading } = useGetSampleDataQuery('data');
   console.log(!isLoading ? { data, error, isLoading } : 'isLoading');
+
   return (
     <div className="App">
       <StyledAppDiv>
         <StyledComponentWindow>
-
           <StyledTopBar>
             <div style={{ fontSize: '44px', textAlign: 'left', height: '15%' }}>Top Bar</div>
             <StyledRadioButtonDiv>
@@ -77,7 +78,54 @@ function App() {
           <StyledBodyContainer>
             <StyledBody>
               <StyledPieChartDiv>
-                pie chart div
+                <div>pie chart below</div>
+                <PieChart
+                  data={[{
+                    id: 0,
+                    year: 2015,
+                    course: 'English 1C: Applied Composition',
+                    instructor: 'Lacey Leblanc',
+                    students: 5,
+                  },
+                  {
+                    id: 1,
+                    year: 2015,
+                    course: 'English 1B: Argument & Analysis',
+                    instructor: 'Mcclain Page',
+                    students: 5,
+                  },
+                  {
+                    id: 2,
+                    year: 2015,
+                    course: 'English 1B: Argument & Analysis',
+                    instructor: 'Kellie Copeland',
+                    students: 5,
+                  },
+                  {
+                    id: 3,
+                    year: 2015,
+                    course: 'English 1C: Applied Composition',
+                    instructor: 'Kellie Copeland',
+                    students: 5,
+                  },
+                  {
+                    id: 4,
+                    year: 2015,
+                    course: 'English 1A: Freshman Composition',
+                    instructor: 'Nikki Mccullough',
+                    students: 5,
+                  },
+                  {
+                    id: 5,
+                    year: 2015,
+                    course: 'English 1C: Applied Composition',
+                    instructor: 'Mcclain Page',
+                    students: 5,
+                  }]}
+                  outerRadius={160}
+                  innerRadius={30}
+                />
+
               </StyledPieChartDiv>
 
               <StyledGridDiv>
