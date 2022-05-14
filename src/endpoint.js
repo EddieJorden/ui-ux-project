@@ -1,8 +1,12 @@
 const express = require('express');
 
+const cors = require('cors');
+const { applyMiddleware } = require('@reduxjs/toolkit');
 const data = require('./sample_data.json');
 
 const api = express();
+
+api.use(cors());
 
 const HOST = 'localhost';
 const PORT = 8888;
