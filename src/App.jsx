@@ -3,6 +3,7 @@ import './App.css';
 import styled from 'styled-components';
 import { useGetSampleDataQuery } from './sampleDataApi';
 import PieChart from './components/pieChart/PieChart';
+import RadioButtons from './components/radioButtons/RadioButtons';
 
 const StyledAppDiv = styled.div`
   display: flex;
@@ -71,7 +72,7 @@ function App() {
           <StyledTopBar>
             <div style={{ fontSize: '44px', textAlign: 'left', height: '15%' }}>Top Bar</div>
             <StyledRadioButtonDiv>
-              radio button div
+              <RadioButtons />
             </StyledRadioButtonDiv>
           </StyledTopBar>
 
