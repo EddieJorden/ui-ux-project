@@ -1,7 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 import './App.css';
 import styled from 'styled-components';
-import { useGetSampleDataQuery } from './sampleDataApi';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { setFilterData } from './components/pieChart/pieChartSlice';
+import { useGetSampleDataQuery } from './apiReducer';
 import PieChart from './components/pieChart/PieChart';
 import RadioButtons from './components/radioButtons/RadioButtons';
 
@@ -63,6 +66,15 @@ const StyledPieInformationdiv = styled.div`
 
 function App() {
   const { data, error, isLoading } = useGetSampleDataQuery('data');
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (data) {
+      dispatch(setFilterData(data));
+    }
+  }, [isLoading, data]);
+
   console.log(!isLoading ? { data, error, isLoading } : 'isLoading');
 
   return (
@@ -81,50 +93,9 @@ function App() {
               <StyledPieChartDiv>
                 <div>pie chart below</div>
                 <PieChart
-                  data={[{
-                    id: 0,
-                    year: 2015,
-                    course: 'English 1C: Applied Composition',
-                    instructor: 'Lacey Leblanc',
-                    students: 5,
-                  },
-                  {
-                    id: 1,
-                    year: 2015,
-                    course: 'English 1B: Argument & Analysis',
-                    instructor: 'Mcclain Page',
-                    students: 5,
-                  },
-                  {
-                    id: 2,
-                    year: 2015,
-                    course: 'English 1B: Argument & Analysis',
-                    instructor: 'Kellie Copeland',
-                    students: 5,
-                  },
-                  {
-                    id: 3,
-                    year: 2015,
-                    course: 'English 1C: Applied Composition',
-                    instructor: 'Kellie Copeland',
-                    students: 5,
-                  },
-                  {
-                    id: 4,
-                    year: 2015,
-                    course: 'English 1A: Freshman Composition',
-                    instructor: 'Nikki Mccullough',
-                    students: 5,
-                  },
-                  {
-                    id: 5,
-                    year: 2015,
-                    course: 'English 1C: Applied Composition',
-                    instructor: 'Mcclain Page',
-                    students: 5,
-                  }]}
+                  data={isLoading ? ['loading', 'loading', 'loading'] : data}
                   outerRadius={160}
-                  innerRadius={30}
+                  innerRadius={0}
                 />
 
               </StyledPieChartDiv>
