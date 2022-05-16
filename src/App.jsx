@@ -10,6 +10,7 @@ import RadioButtons from './components/radioButtons/RadioButtons';
 import GridComponent from './components/gridComponent/GridComponent';
 import TopBar from './components/topBarComponent/TopBar';
 import PieFooter from './components/pieFooterComponent/PieFooter';
+import GridTitle from './components/gridTitle/GridTitle';
 
 const StyledAppDiv = styled.div`
   display: flex;
@@ -32,11 +33,13 @@ const StyledComponentWindow = styled.div`
 
 const StyledTopBar = styled.div`
   background-color: grey;
+  display: flex;
 `;
 
 const StyledRadioButtonDiv = styled.div`
   width: 100%;
-  text-align: left
+  text-align: left;
+  display: flex;
 `;
 
 const StyledPieChartDiv = styled.div`
@@ -73,6 +76,13 @@ max-height: 50%;
 overflow: hidden;
 `;
 
+const GridTitleContainer = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%
+`;
+
 function App() {
   const { data, error, isLoading } = useGetSampleDataQuery('data');
 
@@ -91,10 +101,17 @@ function App() {
       <StyledAppDiv>
         <StyledComponentWindow>
           <StyledTopBar>
-            <div style={{ fontSize: '44px', textAlign: 'left', height: '15%' }}><TopBar /></div>
-            <StyledRadioButtonDiv>
-              <RadioButtons />
-            </StyledRadioButtonDiv>
+            <div>
+              <div>
+                <div style={{ fontSize: '42px', textAlign: 'left', height: '15%' }}><TopBar /></div>
+              </div>
+              <StyledRadioButtonDiv>
+                <RadioButtons />
+              </StyledRadioButtonDiv>
+            </div>
+            <GridTitleContainer>
+              <GridTitle />
+            </GridTitleContainer>
           </StyledTopBar>
 
           <StyledBodyContainer>
