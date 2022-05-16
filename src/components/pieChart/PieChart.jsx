@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-use-before-define */
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
 import * as d3 from 'd3';
 import { selectFilterData } from './pieChartSlice';
 
 function PieChart(props) {
+  const svgRef = useRef();
+
   const {
 
     outerRadius,
@@ -14,7 +16,6 @@ function PieChart(props) {
   } = props;
 
   const filteredData = useSelector(selectFilterData);
-  console.log('filteredData', filteredData);
 
   const margin = {
     top: 50, right: 50, bottom: 50, left: 50,
@@ -83,7 +84,7 @@ function PieChart(props) {
       });
   }
 
-  return <div id="pie-container" />;
+  return <div ref={svgRef} id="pie-container" />;
 }
 
 export default PieChart;
