@@ -7,6 +7,7 @@ import { setFilterData } from './components/pieChart/pieChartSlice';
 import { useGetSampleDataQuery } from './apiReducer';
 import PieChart from './components/pieChart/PieChart';
 import RadioButtons from './components/radioButtons/RadioButtons';
+import GridComponent from './components/gridComponent/GridComponent';
 
 const StyledAppDiv = styled.div`
   display: flex;
@@ -24,6 +25,7 @@ const StyledComponentWindow = styled.div`
   width: 80vw;
   box-shadow: 5px 5px 10px;
   border-radius: 10px;
+  overflow: hidden
 `;
 
 const StyledTopBar = styled.div`
@@ -52,16 +54,21 @@ const StyledBody = styled.div`
   max-height: 100%;
   min-height: 100%;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 `;
 
 const StyledGridDiv = styled.div`
-  background-color: green;
-  height: 100%
+  background-color: #3096e0;
+  height: 100%;
 `;
 
 const StyledPieInformationdiv = styled.div`
   background-color: yellow
+`;
+
+const StyledGridWindow = styled.div`
+max-height: 50%;
+overflow: hidden;
 `;
 
 function App() {
@@ -99,10 +106,11 @@ function App() {
                 />
 
               </StyledPieChartDiv>
-
-              <StyledGridDiv>
-                grid div
-              </StyledGridDiv>
+              <StyledGridWindow>
+                <StyledGridDiv>
+                  <GridComponent />
+                </StyledGridDiv>
+              </StyledGridWindow>
             </StyledBody>
           </StyledBodyContainer>
           <StyledPieInformationdiv>
