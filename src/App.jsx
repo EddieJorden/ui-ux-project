@@ -9,6 +9,7 @@ import PieChart from './components/pieChart/PieChart';
 import RadioButtons from './components/radioButtons/RadioButtons';
 import GridComponent from './components/gridComponent/GridComponent';
 import TopBar from './components/topBarComponent/TopBar';
+import PieFooter from './components/pieFooterComponent/PieFooter';
 
 const StyledAppDiv = styled.div`
   display: flex;
@@ -64,7 +65,7 @@ const StyledGridDiv = styled.div`
 `;
 
 const StyledPieInformationdiv = styled.div`
-  background-color: yellow
+ font-size: 8px
 `;
 
 const StyledGridWindow = styled.div`
@@ -105,6 +106,9 @@ function App() {
                   outerRadius={160}
                   innerRadius={0}
                 />
+                <StyledPieInformationdiv>
+                  <PieFooter />
+                </StyledPieInformationdiv>
 
               </StyledPieChartDiv>
               <StyledGridWindow>
@@ -114,9 +118,6 @@ function App() {
               </StyledGridWindow>
             </StyledBody>
           </StyledBodyContainer>
-          <StyledPieInformationdiv>
-            pie information here
-          </StyledPieInformationdiv>
 
         </StyledComponentWindow>
       </StyledAppDiv>
