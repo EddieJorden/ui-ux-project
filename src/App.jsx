@@ -8,6 +8,7 @@ import { useGetSampleDataQuery } from './apiReducer';
 import PieChart from './components/pieChart/PieChart';
 import RadioButtons from './components/radioButtons/RadioButtons';
 import GridComponent from './components/gridComponent/GridComponent';
+import TopBar from './components/topBarComponent/TopBar';
 
 const StyledAppDiv = styled.div`
   display: flex;
@@ -89,7 +90,7 @@ function App() {
       <StyledAppDiv>
         <StyledComponentWindow>
           <StyledTopBar>
-            <div style={{ fontSize: '44px', textAlign: 'left', height: '15%' }}>Top Bar</div>
+            <div style={{ fontSize: '44px', textAlign: 'left', height: '15%' }}><TopBar /></div>
             <StyledRadioButtonDiv>
               <RadioButtons />
             </StyledRadioButtonDiv>

@@ -5,7 +5,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const pieChartSlice = createSlice({
   name: 'pieChart',
   initialState: {
-    filter: false,
+    filter: 'All Years',
     filteredData: [
       {
         id: 14,
@@ -58,4 +58,5 @@ export const {
 } = pieChartSlice.actions;
 export const selectFilterData = (state) => state.pieChart.filteredData;
 export const selectCoursesArray = (state) => state.pieChart.coursesArray;
+export const selectFilter = (state) => state.pieChart.filter;
 export default pieChartSlice.reducer;
