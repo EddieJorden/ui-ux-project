@@ -1,14 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
+import pieChartSlice from './components/pieChart/pieChartSlice';
 
-import { sampleDataApi } from './sampleDataApi';
+import { apiReducer } from './apiReducer';
 
 // eslint-disable-next-line import/prefer-default-export
 export const store = configureStore({
   reducer: {
-    [sampleDataApi.reducerPath]: sampleDataApi.reducer,
+    [apiReducer.reducerPath]: apiReducer.reducer,
+    pieChart: pieChartSlice,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sampleDataApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiReducer.middleware),
 });
 
 setupListeners(store.dispatch);

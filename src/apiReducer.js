@@ -1,7 +1,7 @@
 const { createApi, fetchBaseQuery } = require('@reduxjs/toolkit/query/react');
 
-export const sampleDataApi = createApi({
-  reducerPath: 'sampleDataApi',
+export const apiReducer = createApi({
+  reducerPath: 'apiReducer',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:8888' }),
   endpoints: (builder) => ({
     getSampleData: builder.query({
@@ -10,4 +10,4 @@ export const sampleDataApi = createApi({
   }),
 });
 
-export const { useGetSampleDataQuery } = sampleDataApi;
+export const { useGetSampleDataQuery } = apiReducer;

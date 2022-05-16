@@ -1,7 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
+import { useDispatch } from 'react-redux';
+import { setFilter } from '../pieChart/pieChartSlice';
+
 function RadioButtons() {
+  const dispatch = useDispatch();
   const handleChange = (e) => {
-    console.log(e.target.value);
+    dispatch(setFilter(e.target.value));
   };
   return (
     <div>

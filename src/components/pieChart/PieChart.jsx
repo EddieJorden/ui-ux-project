@@ -1,14 +1,20 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-use-before-define */
 import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+
 import * as d3 from 'd3';
+import { selectFilterData } from './pieChartSlice';
 
 function PieChart(props) {
   const {
-    data,
+
     outerRadius,
     innerRadius,
   } = props;
+
+  const filteredData = useSelector(selectFilterData);
+  console.log('filteredData', filteredData);
 
   const margin = {
     top: 50, right: 50, bottom: 50, left: 50,
@@ -20,11 +26,11 @@ function PieChart(props) {
   const colorScale = d3
     .scaleSequential()
     .interpolator(d3.interpolateCool)
-    .domain([0, data.length]);
+    .domain([0, 3]);
 
   useEffect(() => {
     drawChart();
-  }, [data]);
+  }, []);
 
   function drawChart() {
     // Remove the old svg
@@ -49,11 +55,11 @@ function PieChart(props) {
     const pieGenerator = d3
       .pie()
       .padAngle(0)
-      .value((d) => d.id);
+      .value((d) => d.students);
 
     const arc = svg
       .selectAll()
-      .data(pieGenerator(data))
+      .data(pieGenerator(filteredData))
       .enter();
 
     // Append arcs
@@ -69,8 +75,8 @@ function PieChart(props) {
       .append('text')
       .attr('text-anchor', 'middle')
       .attr('alignment-baseline', 'middle')
-      .text((d) => d.data.instructor)
-      .style('fill', (_, i) => colorScale(data.length - i))
+      .text((d) => d.data.course)
+      .style('fill', (_, i) => colorScale(filteredData.length - i))
       .attr('transform', (d) => {
         const [x, y] = arcGenerator.centroid(d);
         return `translate(${x}, ${y})`;
