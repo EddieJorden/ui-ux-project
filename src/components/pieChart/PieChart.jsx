@@ -1,21 +1,19 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-use-before-define */
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-
 import * as d3 from 'd3';
-import { selectFilterData } from './pieChartSlice';
+import { selectCoursesArray } from './pieChartSlice';
 
 function PieChart(props) {
-  const svgRef = useRef();
-
   const {
 
     outerRadius,
     innerRadius,
   } = props;
 
-  const filteredData = useSelector(selectFilterData);
+  const filteredData = useSelector(selectCoursesArray);
+  console.log(filteredData);
 
   const margin = {
     top: 50, right: 50, bottom: 50, left: 50,
@@ -31,7 +29,7 @@ function PieChart(props) {
 
   useEffect(() => {
     drawChart();
-  }, []);
+  }, [filteredData]);
 
   function drawChart() {
     // Remove the old svg
@@ -84,7 +82,7 @@ function PieChart(props) {
       });
   }
 
-  return <div ref={svgRef} id="pie-container" />;
+  return <div id="pie-container" />;
 }
 
 export default PieChart;
