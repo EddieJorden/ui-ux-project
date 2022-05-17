@@ -2,7 +2,7 @@
 
 function GridTitle() {
   return (
-    <div style={{ fontSize: '42px' }}>
+    <div style={{ fontSize: '42px', display: 'none' }}>
       Grid Title Here
     </div>
   );

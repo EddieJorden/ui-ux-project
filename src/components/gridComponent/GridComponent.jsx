@@ -3,18 +3,16 @@
 
 import { useSelector } from 'react-redux';
 import GridLineComponent from './GridLineComponent';
-import { selectFilterData } from '../pieChart/pieChartSlice';
+import { selectCoursesArray } from '../pieChart/pieChartSlice';
 
 function GridComponent() {
-  const filteredData = useSelector(selectFilterData);
-
-  const dataToDisplay = [filteredData[0], filteredData[1], filteredData[2]];
+  const filteredData = useSelector(selectCoursesArray);
 
   let uniqueKey = 0;
 
   return (
     <div>
-      {dataToDisplay.map((each) => {
+      {filteredData.map((each) => {
         uniqueKey += 1;
         return (
           <div key={uniqueKey}>
