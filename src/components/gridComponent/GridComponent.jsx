@@ -17,7 +17,7 @@ function GridComponent() {
       {dataToDisplay.map((each) => {
         uniqueKey += 1;
         return (
-          <div>
+          <div key={uniqueKey}>
             <GridLineComponent
               year={each.year}
               course={each.course}

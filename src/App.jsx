@@ -1,9 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
 import './App.css';
 import styled from 'styled-components';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { setFilterData } from './components/pieChart/pieChartSlice';
+import { setFilterData, selectFilter } from './components/pieChart/pieChartSlice';
 import { useGetSampleDataQuery } from './apiReducer';
 import PieChart from './components/pieChart/PieChart';
 import RadioButtons from './components/radioButtons/RadioButtons';
@@ -24,7 +24,6 @@ const StyledAppDiv = styled.div`
 const StyledComponentWindow = styled.div`
   background-color: white;
   color: black;
-  height: 600px;
   width: 80vw;
   box-shadow: 5px 5px 10px;
   border-radius: 10px;
@@ -68,7 +67,12 @@ const StyledGridDiv = styled.div`
 `;
 
 const StyledPieInformationdiv = styled.div`
- font-size: 8px
+ font-size: 8px;
+ height: 100%;
+ display:flex;
+ flex-direction: column;
+ justify-content: start;
+
 `;
 
 const StyledGridWindow = styled.div`
@@ -85,6 +89,7 @@ const GridTitleContainer = styled.div`
 
 function App() {
   const { data, error, isLoading } = useGetSampleDataQuery('data');
+  const filter = useSelector(selectFilter);
 
   const dispatch = useDispatch();
 
@@ -92,7 +97,7 @@ function App() {
     if (data) {
       dispatch(setFilterData(data));
     }
-  }, [isLoading, data]);
+  }, [isLoading, data, filter]);
 
   console.log(!isLoading ? { data, error, isLoading } : 'isLoading');
 
@@ -117,7 +122,6 @@ function App() {
           <StyledBodyContainer>
             <StyledBody>
               <StyledPieChartDiv>
-                <div>pie chart below</div>
                 <PieChart
                   data={isLoading ? ['loading', 'loading', 'loading'] : data}
                   outerRadius={160}

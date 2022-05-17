@@ -1,19 +1,27 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import { useSelector } from 'react-redux';
-import { selectFilterData } from '../pieChart/pieChartSlice';
+import { selectCoursesArray } from '../pieChart/pieChartSlice';
 
 function PieFooter() {
-  const pieData = useSelector(selectFilterData);
+  const pieData = useSelector(selectCoursesArray);
+
+  let uniqueKey = 1;
 
   return (
     <div>
-      {pieData.filter((each) => each.id < 3).map((each) => (
-
-        <div>
-          <div>{each.course}</div>
-        </div>
-      ))}
+      {pieData.map((each) => {
+        uniqueKey += 1;
+        return (
+          <div key={uniqueKey}>
+            <div>{each.course}</div>
+            <div>
+              students:
+              {each.students}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
