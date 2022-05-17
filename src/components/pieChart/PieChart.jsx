@@ -7,10 +7,14 @@ import { selectCoursesArray } from './pieChartSlice';
 
 function PieChart(props) {
   const {
-
     outerRadius,
     innerRadius,
   } = props;
+
+  const handleClick = (d) => {
+    // eslint-disable-next-line no-underscore-dangle
+    console.log('clicked', d.target.__data__);
+  };
 
   const filteredData = useSelector(selectCoursesArray);
   console.log(filteredData);
@@ -65,6 +69,8 @@ function PieChart(props) {
     arc
       .append('path')
       .attr('d', arcGenerator)
+      // eslint-disable-next-line no-underscore-dangle
+      .on('click', handleClick)
       .style('fill', (_, i) => colorScale(i))
       .style('stroke', '#ffffff')
       .style('stroke-width', 0);
