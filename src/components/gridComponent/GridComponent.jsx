@@ -11,8 +11,22 @@ const GridComponentDiv = styled.div`
 
 function GridComponent() {
   const filteredData = useSelector(selectInstructorsArray);
-
   let uniqueKey = 0;
+
+  const isStudentsAverage = () => {
+    let sumOfStudents = 0;
+    let sumOfCourses = null;
+    filteredData.forEach((item) => {
+      if (typeof item.students === 'number') {
+        sumOfStudents += Number(item.students);
+        sumOfCourses += 1;
+      }
+    });
+    const averageStudents = sumOfStudents / sumOfCourses;
+    return averageStudents;
+  };
+
+  console.log('isStudentsAverage', isStudentsAverage());
 
   return (
     <GridComponentDiv>
@@ -26,6 +40,7 @@ function GridComponent() {
               instructor={each.instructor}
               students={each.students}
               uniqueKey={uniqueKey}
+              isBold={isStudentsAverage() < each.students ? 'bold' : 'normal'}
             />
           </div>
         );

@@ -22,7 +22,7 @@ justify-content: center;
 
 function GridLineComponent(props) {
   const {
-    year, course, instructor, students, uniqueKey,
+    year, course, instructor, students, uniqueKey, isBold,
   } = props;
 
   const color = () => {
@@ -36,7 +36,7 @@ function GridLineComponent(props) {
       <div className="year" style={{ width: '66px' }}>{!year ? 'loading' : year}</div>
       <div className="course" style={{ width: '180px' }}>{!course ? 'loading' : course}</div>
       <div style={{ width: '100px' }}>{!instructor ? 'laoding' : instructor}</div>
-      <div style={{ width: '100px' }}>{!students ? 'students' : students}</div>
+      <div style={{ width: '100px', fontWeight: isBold }}>{!students ? 'students' : students}</div>
     </GridLine>
   );
 }
