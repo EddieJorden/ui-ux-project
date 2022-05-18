@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { setFilterData, selectFilter } from './components/pieChart/pieChartSlice';
 import { useGetSampleDataQuery } from './apiReducer';
 import PieChart from './components/pieChart/PieChart';
-import RadioButtons from './components/radioButtons/RadioButtons';
+import FilterButtons from './components/filterButtons/FilterButtonsComponent';
 import GridComponent from './components/gridComponent/GridComponent';
 import TopBar from './components/topBarComponent/TopBar';
 import PieFooter from './components/pieFooterComponent/PieFooter';
@@ -118,7 +118,7 @@ function App() {
                   <TopBar />
                 </div>
                 <StyledRadioButtonDiv>
-                  <RadioButtons />
+                  <FilterButtons />
                 </StyledRadioButtonDiv>
                 <PieChart
                   data={isLoading ? ['loading', 'loading', 'loading'] : data}
