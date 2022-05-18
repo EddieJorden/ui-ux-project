@@ -6,11 +6,11 @@ import { createSlice } from '@reduxjs/toolkit';
 const pieChartSlice = createSlice({
   name: 'pieChart',
   initialState: {
-    filter: 'all',
+    filter: 'All Years',
     filteredData: [],
     coursesArray: [],
     instructorsArray: [],
-    selectedCourse: 'English 1C: Applied Composition',
+    selectedCourse: '',
   },
 
   reducers: {
@@ -24,7 +24,7 @@ const pieChartSlice = createSlice({
       const uniqueCourses = [];
       state.coursesArray = [];
 
-      if (state.filter === 'all') {
+      if (state.filter === 'All Years') {
         action.payload.forEach((each) => {
           if (!uniqueCourses.includes(each.course)) {
             uniqueCourses.push(each.course);
@@ -44,7 +44,7 @@ const pieChartSlice = createSlice({
             });
           }
         });
-      } if (state.filter !== 'all') {
+      } if (state.filter !== 'All Years') {
         action.payload.filter((item) => item.year === Number(state.filter)).forEach((each) => {
           if (!uniqueCourses.includes(each.course)) {
             uniqueCourses.push(each.course);
@@ -74,7 +74,7 @@ const pieChartSlice = createSlice({
         year: 'Year', course: 'Course', instructor: 'Instructor', students: 'Students',
       }];
 
-      if (state.filter === 'all') {
+      if (state.filter === 'All Years') {
         state.filteredData.forEach((each) => {
           if (each.course === state.selectedCourse && !uniqueInstructor.includes(each.instructor)) {
             uniqueInstructor.push(each.instructor);
@@ -95,7 +95,7 @@ const pieChartSlice = createSlice({
             });
           }
         });
-      } if (state.filter !== 'all') {
+      } if (state.filter !== 'All Years') {
         state.filteredData.filter((item) => item.year === Number(state.filter)).forEach((each) => {
           if (each.course === state.selectedCourse && !uniqueInstructor.includes(each.instructor)) {
             uniqueInstructor.push(each.instructor);

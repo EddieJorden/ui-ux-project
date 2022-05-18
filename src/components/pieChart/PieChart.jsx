@@ -24,7 +24,7 @@ function PieChart(props) {
   const filteredData = useSelector(selectCoursesArray);
 
   const margin = {
-    top: 50, right: 50, bottom: 50, left: 50,
+    top: 0, right: 0, bottom: 0, left: 0,
   };
 
   const width = 2 * outerRadius + margin.left + margin.right;

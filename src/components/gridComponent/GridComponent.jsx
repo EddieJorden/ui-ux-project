@@ -7,7 +7,6 @@ import GridLineComponent from './GridLineComponent';
 import { selectInstructorsArray } from '../pieChart/pieChartSlice';
 
 const GridComponentDiv = styled.div`
-  width: 600px
 `;
 
 function GridComponent() {

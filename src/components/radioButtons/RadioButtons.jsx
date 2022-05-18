@@ -2,14 +2,12 @@
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { setFilter } from '../pieChart/pieChartSlice';
+import RadioButton from './RadioButtonComponent';
 
 const RadioButtonsDiv = styled.div`
   display: flex;
-  align-items: center
-`;
-
-const ButtonDiv = styled.div`
-  margin: 10px
+  align-items: center;
+  justify-content: space-evenly
 `;
 
 function RadioButtons() {
@@ -17,26 +15,12 @@ function RadioButtons() {
   const handleChange = (e) => {
     dispatch(setFilter(e.target.value));
   };
+
   return (
     <RadioButtonsDiv>
-      <ButtonDiv>
-        <div>
-          ALL YEARS
-        </div>
-        <input type="radio" value="all" name="all" onChange={handleChange} />
-      </ButtonDiv>
-      <div>
-        <div>
-          2015
-        </div>
-        <input type="radio" value="2015" name="2015" onChange={handleChange} />
-      </div>
-      <div>
-        <div>
-          2016
-        </div>
-        <input type="radio" value="2016" name="2016" onChange={handleChange} />
-      </div>
+      <RadioButton value="All Years" handleChange={handleChange} />
+      <RadioButton value="2015" handleChange={handleChange} />
+      <RadioButton value="2016" handleChange={handleChange} />
     </RadioButtonsDiv>
   );
 }
