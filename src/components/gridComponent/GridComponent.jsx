@@ -26,8 +26,6 @@ function GridComponent() {
     return averageStudents;
   };
 
-  console.log('isStudentsAverage', isStudentsAverage());
-
   return (
     <GridComponentDiv>
       {filteredData.map((each) => {
