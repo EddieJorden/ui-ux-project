@@ -29,7 +29,6 @@ const pieChartSlice = createSlice({
         action.payload.forEach((each) => {
           if (!uniqueCourses.includes(each.course)) {
             uniqueCourses.push(each.course);
-
             state.coursesArray.push({
               course: each.course,
               students: each.students,
@@ -89,8 +88,8 @@ const pieChartSlice = createSlice({
           }
           if (uniqueInstructor.includes(each.instructor)) {
             state.instructorsArray.forEach((instructor) => {
-              if (instructor === each.instructor
-                && each.course === state.selectedCourse) {
+              if (instructor.course === each.course
+                && instructor.instructor === each.instructor) {
                 instructor.students += each.students;
               }
             });
