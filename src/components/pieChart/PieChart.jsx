@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-use-before-define */
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import * as d3 from 'd3';
-import { selectCoursesArray } from './pieChartSlice';
+import { selectCoursesArray, setCourseFilter, setGridData } from './pieChartSlice';
 
 function PieChart(props) {
   const {
@@ -11,13 +11,17 @@ function PieChart(props) {
     innerRadius,
   } = props;
 
+  const dispatch = useDispatch();
+
   const handleClick = (d) => {
     // eslint-disable-next-line no-underscore-dangle
-    console.log('clicked', d.target.__data__);
+    const data = d.target.__data__.data.course;
+    // eslint-disable-next-line no-underscore-dangle
+    dispatch(setCourseFilter(data));
+    dispatch(setGridData());
   };
 
   const filteredData = useSelector(selectCoursesArray);
-  console.log(filteredData);
 
   const margin = {
     top: 50, right: 50, bottom: 50, left: 50,

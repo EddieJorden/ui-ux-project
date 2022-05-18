@@ -2,16 +2,21 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import { useSelector } from 'react-redux';
+import styled from 'styled-components';
 import GridLineComponent from './GridLineComponent';
-import { selectCoursesArray } from '../pieChart/pieChartSlice';
+import { selectInstructorsArray } from '../pieChart/pieChartSlice';
+
+const GridComponentDiv = styled.div`
+  width: 600px
+`;
 
 function GridComponent() {
-  const filteredData = useSelector(selectCoursesArray);
+  const filteredData = useSelector(selectInstructorsArray);
 
   let uniqueKey = 0;
 
   return (
-    <div>
+    <GridComponentDiv>
       {filteredData.map((each) => {
         uniqueKey += 1;
         return (
@@ -19,13 +24,14 @@ function GridComponent() {
             <GridLineComponent
               year={each.year}
               course={each.course}
+              instructor={each.instructor}
               students={each.students}
               uniqueKey={uniqueKey}
             />
           </div>
         );
       })}
-    </div>
+    </GridComponentDiv>
   );
 }
 
