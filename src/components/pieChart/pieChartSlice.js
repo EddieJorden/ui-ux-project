@@ -17,6 +17,7 @@ const pieChartSlice = createSlice({
     setFilter(state, action) {
       state.filter = action.payload;
       state.instructorsArray = [];
+      state.selectedCourse = '';
     },
 
     setFilterData(state, action) {
