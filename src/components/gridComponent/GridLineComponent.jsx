@@ -4,10 +4,20 @@ import styled from 'styled-components';
 
 const GridLine = styled.div`
 display: flex;
-width: 100%;
+max-width: 100%;
 height: 5%;
 align-items: center;
-justify-content: center
+justify-content: center;
+
+@media only screen and (max-width: 1096px) {
+  .year {
+    display: none
+  }
+
+  .course {
+    display: none
+  }
+}
 `;
 
 function GridLineComponent(props) {
@@ -23,10 +33,10 @@ function GridLineComponent(props) {
 
   return (
     <GridLine style={{ backgroundColor: color() }}>
-      <div style={{ width: '66px' }}>{!year ? 'loading' : year}</div>
-      <div style={{ width: '180px' }}>{!course ? 'loading' : course}</div>
+      <div className="year" style={{ width: '66px' }}>{!year ? 'loading' : year}</div>
+      <div className="course" style={{ width: '180px' }}>{!course ? 'loading' : course}</div>
       <div style={{ width: '100px' }}>{!instructor ? 'laoding' : instructor}</div>
-      <div style={{ width: '42px' }}>{!students ? 'students' : students}</div>
+      <div style={{ width: '100px' }}>{!students ? 'students' : students}</div>
     </GridLine>
   );
 }

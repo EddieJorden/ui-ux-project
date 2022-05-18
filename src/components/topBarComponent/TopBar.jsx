@@ -5,10 +5,11 @@ import { selectFilter } from '../pieChart/pieChartSlice';
 function TopBar() {
   const year = useSelector(selectFilter);
 
-  return (
-    <div>
-      {!year ? 'Students By All Years' : `Students By ${year}`}
+  const currentFilter = `Students filtered by ${year}`;
 
+  return (
+    <div style={{ width: '100%' }}>
+      {currentFilter}
     </div>
   );
 }

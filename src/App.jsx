@@ -18,7 +18,7 @@ const StyledAppDiv = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh
+  height: 100vh;
 `;
 
 const StyledComponentWindow = styled.div`
@@ -27,12 +27,11 @@ const StyledComponentWindow = styled.div`
   width: 80vw;
   box-shadow: 5px 5px 10px;
   border-radius: 10px;
-  overflow: hidden
-`;
-
-const StyledTopBar = styled.div`
-  background-color: grey;
   display: flex;
+
+  @media only screen and (max-width: 1096px) {
+    width: 100vw
+  }
 `;
 
 const StyledRadioButtonDiv = styled.div`
@@ -42,7 +41,6 @@ const StyledRadioButtonDiv = styled.div`
 `;
 
 const StyledPieChartDiv = styled.div`
-  background-color: lightGrey;
   height: 100%;
 `;
 
@@ -59,32 +57,36 @@ const StyledBody = styled.div`
   min-height: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 1096px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
 `;
 
 const StyledGridDiv = styled.div`
-  background-color: #3096e0;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px
 `;
 
 const StyledPieInformationdiv = styled.div`
- font-size: 8px;
+ font-size: 14px;
  height: 100%;
  display:flex;
  flex-direction: column;
  justify-content: start;
-
-`;
-
-const StyledGridWindow = styled.div`
-max-height: 50%;
-overflow: hidden;
+  margin-bottom: 30px;
 `;
 
 const GridTitleContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
-  align-items: center;
-  width: 100%
+  justify-content: flex-end
 `;
 
 function App() {
@@ -105,41 +107,38 @@ function App() {
     <div className="App">
       <StyledAppDiv>
         <StyledComponentWindow>
-          <StyledTopBar>
-            <div>
-              <div>
-                <div style={{ fontSize: '42px', textAlign: 'left', height: '15%' }}><TopBar /></div>
-              </div>
-              <StyledRadioButtonDiv>
-                <RadioButtons />
-              </StyledRadioButtonDiv>
-            </div>
-            <GridTitleContainer>
-              <GridTitle />
-            </GridTitleContainer>
-          </StyledTopBar>
-
           <StyledBodyContainer>
             <StyledBody>
+
               <StyledPieChartDiv>
+                <div style={{
+                  fontSize: '42px', textAlign: 'left', height: '15%', width: '100%',
+                }}
+                >
+                  <TopBar />
+                </div>
+                <StyledRadioButtonDiv>
+                  <RadioButtons />
+                </StyledRadioButtonDiv>
                 <PieChart
                   data={isLoading ? ['loading', 'loading', 'loading'] : data}
-                  outerRadius={160}
+                  outerRadius={180}
                   innerRadius={0}
                 />
                 <StyledPieInformationdiv>
                   <PieFooter />
                 </StyledPieInformationdiv>
-
               </StyledPieChartDiv>
-              <StyledGridWindow>
-                <StyledGridDiv>
-                  <GridComponent />
-                </StyledGridDiv>
-              </StyledGridWindow>
+
+              <StyledGridDiv>
+                <GridTitleContainer>
+                  <GridTitle />
+                </GridTitleContainer>
+                <GridComponent />
+              </StyledGridDiv>
+
             </StyledBody>
           </StyledBodyContainer>
-
         </StyledComponentWindow>
       </StyledAppDiv>
     </div>
