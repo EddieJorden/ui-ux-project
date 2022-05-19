@@ -32,5 +32,5 @@ General guidelines
 LightHouse Results
 
 
-![UI:UX Lighthouse Desktop Results](/UI:UX_Lighthouse_Desktop_Results.png)
+![UI:UX Lighthouse Desktop Results](/public/UI:UX_Lighthouse_Desktop_Results.png)
 
