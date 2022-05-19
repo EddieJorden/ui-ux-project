@@ -1,4 +1,4 @@
-~Amber Kinetics Inc UI/UX Engineer Assessment~
+Amber Kinetics Inc UI/UX Engineer Assessment
 
 Description:
 
@@ -30,7 +30,7 @@ General guidelines
 - Once finished please send us the GitHub repository and the application URL.
 
 
-~LightHouse Results~
+LightHouse Results:
 
 Desktop Results:
 ![UI:UX Lighthouse Desktop Results](/public/UI:UX_Lighthouse_Desktop_Results.png)
@@ -38,7 +38,7 @@ Desktop Results:
 Mobile Results:
 ![UI:UX Lighthouse Mobile Results](/public/UI:UX_Lighthouse_Mobile_Results.png)
 
-~ScreenShots~
+ScreenShots:
 
 Desktop:
 ![UI:UX Screenshot Desktop](/public/UI%3AUX_screenshot.png)
@@ -47,7 +47,7 @@ Mobile:
 ![UI:UX Screenshot Mobile](/public/UI%3AUX_screenshot_mobile_280px.png)
 
 
-~Instalation~
+Instalation:
 
 
 How to run a react app from a github repository.
@@ -88,7 +88,7 @@ npm start
 ```
 
 
-~Usage~
+Usage:
 
 This app recieves an array of objects and delivers that data to the pie chart.
 
@@ -108,14 +108,14 @@ You can also click on a slice of the pie to get extra details in the form of a g
 	The grid is filtered by the isntructor and shows the number of students in bold if below average.
 
 
-~Support~
+Support:
 
 For more information or support please visit.
 
-	EddieMoger.com
+[EddieMoger.com](https://eddiemoger.com)
 
 
-~Authors and Acknowledgments~
+Authors and Acknowledgments:
 
  Design, Architect, Engineer and Q&A
 
