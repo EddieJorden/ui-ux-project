@@ -38,7 +38,7 @@ visible only after the user chooses a course. Show the number of students' figur
 ### Mobile:
 ![UI:UX Lighthouse Mobile Results](/public/UI:UX_Lighthouse_Mobile_Results.png)
 
-### ScreenShots:
+## ScreenShots:
 
 ### Desktop:
 ![UI:UX Screenshot Desktop](/public/UI%3AUX_screenshot.png)
