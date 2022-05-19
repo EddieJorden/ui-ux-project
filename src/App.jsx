@@ -88,6 +88,13 @@ const GridTitleContainer = styled.div`
   justify-content: flex-end
 `;
 
+const PieFooterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 function App() {
   const { data, isLoading } = useGetSampleDataQuery('data');
   const filter = useSelector(selectFilter);
@@ -122,9 +129,11 @@ function App() {
                   outerRadius={142}
                   innerRadius={0}
                 />
-                <StyledPieInformationdiv>
-                  <PieFooter />
-                </StyledPieInformationdiv>
+                <PieFooterContainer>
+                  <StyledPieInformationdiv>
+                    <PieFooter />
+                  </StyledPieInformationdiv>
+                </PieFooterContainer>
               </StyledPieChartDiv>
 
               <StyledGridDiv>
