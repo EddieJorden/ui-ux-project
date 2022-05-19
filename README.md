@@ -45,3 +45,44 @@ Desktop:
 
 Mobile:
 ![UI:UX Screenshot Mobile](/public/UI%3AUX_screenshot_mobile.png)
+
+
+~Instalation~
+
+
+How to run a react app from a github repository.
+[Setting up a Project from Github](https://www.pluralsight.com/guides/setting-up-a-react-project-from-github)
+
+Dependencys:
+	react
+	react-redux
+	@reduxjs/toolkit
+	styled-components
+	express
+	node
+	d3
+	cors
+
+You will need to run the provided mock endpoint endpoint.js in Node.
+
+```javascript
+node endpoint.js
+```
+
+this will run the server on localhost 8888
+
+if done correctly you will recieve a message in the terminal
+
+	API running at localhost:8888!
+
+You can then run the app with the script
+
+```javascript
+yarn start
+```
+
+or
+
+```javascript
+npm start
+```
