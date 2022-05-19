@@ -24,7 +24,6 @@ const StyledAppDiv = styled.div`
 const StyledComponentWindow = styled.div`
   background-color: white;
   color: black;
-  width: 80vw;
   box-shadow: 5px 5px 10px;
   border-radius: 10px;
   display: flex;
@@ -35,9 +34,10 @@ const StyledComponentWindow = styled.div`
 `;
 
 const StyledRadioButtonDiv = styled.div`
-  width: 100%;
   text-align: left;
   display: flex;
+  margin-left: 30px;
+  margin-bottom: 30px;
 `;
 
 const StyledPieChartDiv = styled.div`
@@ -52,7 +52,6 @@ const StyledBodyContainer = styled.div`
 `;
 
 const StyledBody = styled.div`
-  width: 88%;
   max-height: 100%;
   min-height: 100%;
   display: flex;
@@ -71,7 +70,7 @@ const StyledGridDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px
+  margin: 30px
 `;
 
 const StyledPieInformationdiv = styled.div`
@@ -80,7 +79,7 @@ const StyledPieInformationdiv = styled.div`
  display:flex;
  flex-direction: column;
  justify-content: start;
-  margin-bottom: 30px;
+  margin: 30px 0px;
 `;
 
 const GridTitleContainer = styled.div`
@@ -90,7 +89,7 @@ const GridTitleContainer = styled.div`
 `;
 
 function App() {
-  const { data, error, isLoading } = useGetSampleDataQuery('data');
+  const { data, isLoading } = useGetSampleDataQuery('data');
   const filter = useSelector(selectFilter);
 
   const dispatch = useDispatch();
@@ -101,8 +100,6 @@ function App() {
     }
   }, [isLoading, data, filter]);
 
-  console.log(!isLoading ? { data, error, isLoading } : 'isLoading');
-
   return (
     <div className="App">
       <StyledAppDiv>
@@ -112,7 +109,7 @@ function App() {
 
               <StyledPieChartDiv>
                 <div style={{
-                  fontSize: '42px', textAlign: 'left', height: '15%', width: '100%',
+                  fontSize: '42px', textAlign: 'left', margin: '15px', padding: '8px', borderRadius: '5px',
                 }}
                 >
                   <TopBar />
@@ -122,7 +119,7 @@ function App() {
                 </StyledRadioButtonDiv>
                 <PieChart
                   data={isLoading ? ['loading', 'loading', 'loading'] : data}
-                  outerRadius={180}
+                  outerRadius={142}
                   innerRadius={0}
                 />
                 <StyledPieInformationdiv>

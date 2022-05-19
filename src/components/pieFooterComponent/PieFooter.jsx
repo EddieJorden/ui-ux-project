@@ -16,8 +16,13 @@ function PieFooter() {
           <div key={uniqueKey}>
             <div>{each.course}</div>
             <div>
-              students:
-              {each.students}
+              <div>
+                Students:
+                <span>
+                  {' '}
+                  {each.students}
+                </span>
+              </div>
             </div>
           </div>
         );

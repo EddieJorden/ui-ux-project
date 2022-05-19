@@ -14,8 +14,6 @@ function FilterButtons() {
   const dispatch = useDispatch();
   const handleClick = (e) => {
     dispatch(setFilter(e.target.value));
-
-    console.log('e in FilterButton', e);
   };
 
   return (

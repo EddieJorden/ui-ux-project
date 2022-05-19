@@ -8,7 +8,7 @@ function TopBar() {
   const currentFilter = `Students filtered by ${year}`;
 
   return (
-    <div style={{ width: '100%' }}>
+    <div>
       {currentFilter}
     </div>
   );
