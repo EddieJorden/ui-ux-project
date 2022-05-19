@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { setFilter } from '../pieChart/pieChartSlice';
+import { selectFilter, setFilter } from '../pieChart/pieChartSlice';
 import FilterButton from './FilterButton';
 
 const FilterButtonDiv = styled.div`
@@ -12,8 +12,9 @@ const FilterButtonDiv = styled.div`
 
 function FilterButtons() {
   const dispatch = useDispatch();
+  const yearFilter = useSelector(selectFilter);
   const handleClick = (e) => {
-    dispatch(setFilter(e.target.value));
+    if (e.target.value !== yearFilter) dispatch(setFilter(e.target.value));
   };
 
   return (
