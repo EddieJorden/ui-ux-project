@@ -20,8 +20,6 @@ function PieChart(props) {
     // eslint-disable-next-line no-underscore-dangle
     const data = d.target.__data__.data.course;
     const color = d.path[0].style.fill;
-    console.log('d', d.path[0].style.fill);
-    // eslint-disable-next-line no-underscore-dangle
     dispatch(setCourseFilter(data));
     dispatch(setSelectedCourseColor(color));
     dispatch(setGridData());
@@ -89,18 +87,6 @@ function PieChart(props) {
       })
       .style('stroke', '#ffffff')
       .style('stroke-width', 0);
-
-    // // Append text labels
-    // arc
-    //   .append('text')
-    //   .attr('text-anchor', 'middle')
-    //   .attr('alignment-baseline', 'middle')
-    //   .text((d) => d.data.course)
-    //   .style('fill', (_, i) => colorScale(filteredData.length - i))
-    //   .attr('transform', (d) => {
-    //     const [x, y] = arcGenerator.centroid(d);
-    //     return `translate(${x}, ${y})`;
-    //   });
   }
 
   return <div id="pie-container" />;

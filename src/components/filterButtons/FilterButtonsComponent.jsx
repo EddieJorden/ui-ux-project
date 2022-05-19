@@ -15,13 +15,14 @@ function FilterButtons() {
   const yearFilter = useSelector(selectFilter);
   const handleClick = (e) => {
     if (e.target.value !== yearFilter) dispatch(setFilter(e.target.value));
+    e.target.cliced = false;
   };
 
   return (
     <FilterButtonDiv>
-      <FilterButton class="All Years" value="All Years" handleClick={handleClick} clicked />
-      <FilterButton value="2015" handleClick={handleClick} clicked />
-      <FilterButton value="2016" handleClick={handleClick} clicked />
+      <FilterButton class="All Years" value="All Years" handleClick={handleClick} />
+      <FilterButton value="2015" handleClick={handleClick} />
+      <FilterButton value="2016" handleClick={handleClick} />
     </FilterButtonDiv>
   );
 }
