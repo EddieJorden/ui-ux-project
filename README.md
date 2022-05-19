@@ -30,30 +30,30 @@ visible only after the user chooses a course. Show the number of students' figur
 - Once finished please send us the GitHub repository and the application URL.
 
 
-LightHouse Results:
+## LightHouse Results:
 
-Desktop Results:
+## Desktop Results:
 ![UI:UX Lighthouse Desktop Results](/public/UI:UX_Lighthouse_Desktop_Results.png)
 
-Mobile Results:
+## Mobile Results:
 ![UI:UX Lighthouse Mobile Results](/public/UI:UX_Lighthouse_Mobile_Results.png)
 
-ScreenShots:
+##S creenShots:
 
-Desktop:
+## Desktop:
 ![UI:UX Screenshot Desktop](/public/UI%3AUX_screenshot.png)
 
-Mobile:
+## Mobile:
 ![UI:UX Screenshot Mobile](/public/UI%3AUX_screenshot_mobile_280px.png)
 
 
-Instalation:
+## Instalation:
 
 
 How to run a react app from a github repository.
 [Setting up a Project from Github](https://www.pluralsight.com/guides/setting-up-a-react-project-from-github)
 
-Dependencies:
+## Dependencies:
 react,
 react-redux,
 @reduxjs/toolkit,
@@ -88,7 +88,7 @@ npm start
 ```
 
 
-Usage:
+## Usage:
 
 This app recieves an array of objects and delivers that data to the pie chart.
 
@@ -108,14 +108,14 @@ You can also click on a slice of the pie to get extra details in the form of a g
 	The grid is filtered by the isntructor and shows the number of students in bold if below average.
 
 
-Support:
+## Support:
 
 For more information or support please visit.
 
 [EddieMoger.com](https://eddiemoger.com)
 
 
-Authors and Acknowledgments:
+## Authors and Acknowledgments:
 
  Design, Architect, Engineer and Q&A
 
