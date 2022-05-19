@@ -44,7 +44,7 @@ Desktop:
 ![UI:UX Screenshot Desktop](/public/UI%3AUX_screenshot.png)
 
 Mobile:
-![UI:UX Screenshot Mobile](/public/UI%3AUX_screenshot_mobile.png)
+![UI:UX Screenshot Mobile](/public/UI%3AUX_screenshot_mobile_280px.png)
 
 
 ~Instalation~
@@ -65,9 +65,9 @@ Dependencys:
 
 You will need to run the provided mock endpoint endpoint.js in Node.
 
-```javascript
-node endpoint.js
-```
+
+	node endpoint.js
+
 
 this will run the server on localhost 8888
 
