@@ -32,10 +32,10 @@ visible only after the user chooses a course. Show the number of students' figur
 
 ## LightHouse Results:
 
-### Desktop Results:
+### Desktop:
 ![UI:UX Lighthouse Desktop Results](/public/UI:UX_Lighthouse_Desktop_Results.png)
 
-### Mobile Results:
+### Mobile:
 ![UI:UX Lighthouse Mobile Results](/public/UI:UX_Lighthouse_Mobile_Results.png)
 
 ### ScreenShots:
