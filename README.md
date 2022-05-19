@@ -31,6 +31,11 @@ General guidelines
 
 LightHouse Results
 
+Desktop Results:
 
 ![UI:UX Lighthouse Desktop Results](/public/UI:UX_Lighthouse_Desktop_Results.png)
+
+Mobile Results:
+
+![UI:UX Lighthouse Mobile Results](/public/UI:UX_Lighthouse_Mobile_Results.png)
 
