@@ -86,3 +86,37 @@ or
 ```javascript
 npm start
 ```
+
+
+~Usage~
+
+This app recieves an array of objects and delivers that data to the pie chart.
+
+You can then filter the items of the pie chart with the radio buttons
+
+You can also click on a slice of the pie to get extra details in the form of a grid.
+
+
+	In this case the api is a list of courses with the number of students, name of instructor, and year.
+
+	The pie chart populates with data structured by course.
+	
+	Each slice represents a course and the size is the number of students.
+
+	When a slice of the pie is selected the grid populates with data for that course only.
+
+	The grid is filtered by the isntructor and shows the number of students in bold if below average.
+
+
+~Support~
+
+For more information or support please visit.
+
+	EddieMoger.com
+
+
+~Authors and Acknowledgments~
+
+ Design, Architect, Engineer and Q&A
+
+  Eddie Moger
