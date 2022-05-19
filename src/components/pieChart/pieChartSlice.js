@@ -143,6 +143,7 @@ export const {
   setSelectedCourseColor,
   setPieFooterArray,
 } = pieChartSlice.actions;
+
 export const selectFilterData = (state) => state.pieChart.filteredData;
 export const selectFilter = (state) => state.pieChart.filter;
 export const selectCoursesArray = (state) => state.pieChart.coursesArray;
