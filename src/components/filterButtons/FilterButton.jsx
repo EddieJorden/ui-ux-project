@@ -9,7 +9,7 @@ function FilterButton(props) {
   const filter = useSelector(selectFilter);
 
   return (
-    <div>
+    <div style={{ marginLeft: '10px' }}>
       <div>{year}</div>
       <input
         type="radio"
