@@ -70,7 +70,7 @@ const StyledGridDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 30px
+  margin: 0px 30px
 `;
 
 const StyledPieInformationdiv = styled.div`
