@@ -51,8 +51,7 @@ Instalation:
 
 
 How to run a react app from a github repository.
-
-	[Setting up a Project from Github](https://www.pluralsight.com/guides/setting-up-a-react-project-from-github)
+[Setting up a Project from Github](https://www.pluralsight.com/guides/setting-up-a-react-project-from-github)
 
 Dependencys:
 	react
