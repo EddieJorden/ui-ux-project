@@ -53,15 +53,15 @@ Instalation:
 How to run a react app from a github repository.
 [Setting up a Project from Github](https://www.pluralsight.com/guides/setting-up-a-react-project-from-github)
 
-Dependencys:
-	react
-	react-redux
-	@reduxjs/toolkit
-	styled-components
-	express
-	node
-	d3
-	cors
+Dependencies:
+react,
+react-redux,
+@reduxjs/toolkit,
+styled-components,
+express,
+node,
+d3,
+cors
 
 You will need to run the provided mock endpoint endpoint.js in Node.
 
