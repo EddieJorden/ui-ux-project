@@ -1,6 +1,6 @@
-Amber Kinetics Inc UI/UX Engineer Assessment
+#Amber Kinetics Inc UI/UX Engineer Assessment
 
-Description:
+##Description:
 
 Welcome to Amber Kinetics Inc's UI/UX assessment challenge. We hope you find this assessment interesting, and maybe even fun!
 
@@ -11,18 +11,18 @@ chart to select a specific course at any time.
 3. A data grid displaying detailed student data for a specific course. The grid becomes
 visible only after the user chooses a course. Show the number of students' figures in bold if they are below average. Also, use alternating background colors for the rows.
 
-Requirements
+##Requirements
 - Implement this feature using React(preferably with Redux).
 - Fetch the mock data by creating a Node.js or Python endpoint
 - The implementation should work for all major browser platforms
 - Implement responsive design and scale for both desktop and mobile browsers
 
-Optional
+##Optional
 - Allow the user to edit the grid
 - The charts should refresh automatically as the data is committed
 - Demonstrate how to incorporate unit testing
 
-General guidelines
+##General guidelines
 - Write clean, properly abstracted code, and pay attention to data structure and performance.
 - If you think a requirement is ambiguous, fill in the blanks and document your assumptions.
 - Describe possible optimizations that could have been done.
