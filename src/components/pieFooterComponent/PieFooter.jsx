@@ -13,9 +13,9 @@ function PieFooter() {
       {pieData.map((each) => {
         uniqueKey += 1;
         return (
-          <div key={uniqueKey} style={{ display: 'flex', justifyContent: 'center' }}>
+          <div key={uniqueKey} style={{ display: 'flex' }}>
             <div style={{
-              width: '18px', height: '18px', backgroundColor: each.payload.color, margin: '22px',
+              width: '18px', height: '18px', backgroundColor: each.payload.color, margin: '8px',
             }}
             />
             <div style={{
