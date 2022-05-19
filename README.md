@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+~Amber Kinetics Inc UI/UX Engineer Assessment~
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description:
 
-## Available Scripts
+Welcome to Amber Kinetics Inc's UI/UX assessment challenge. We hope you find this assessment interesting, and maybe even fun!
 
-In the project directory, you can run:
+The app is a single-page application with dynamic content. The screen consists of the following:
+1. A radio button group that allows the user to filter the data by year.
+2. A chart that breaks down the number of students by course. The user can click on the
+chart to select a specific course at any time.
+3. A data grid displaying detailed student data for a specific course. The grid becomes
+visible only after the user chooses a course. Show the number of students' figures in bold if they are below average. Also, use alternating background colors for the rows.
 
-### `yarn start`
+Requirements
+- Implement this feature using React(preferably with Redux).
+- Fetch the mock data by creating a Node.js or Python endpoint
+- The implementation should work for all major browser platforms
+- Implement responsive design and scale for both desktop and mobile browsers
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Optional
+- Allow the user to edit the grid
+- The charts should refresh automatically as the data is committed
+- Demonstrate how to incorporate unit testing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+General guidelines
+- Write clean, properly abstracted code, and pay attention to data structure and performance.
+- If you think a requirement is ambiguous, fill in the blanks and document your assumptions.
+- Describe possible optimizations that could have been done.
+- Host the application to your choice of provider( Heroku, AWS, Azure, etc).
+- Once finished please send us the GitHub repository and the application URL.
 
-### `yarn test`
+LightHouse Results
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Alt UI:UX Lighthouse Desktop Results](/public/UI:UX_Lighthouse_Desktop_Results)
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
