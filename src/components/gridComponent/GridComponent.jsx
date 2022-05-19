@@ -41,7 +41,7 @@ function GridComponent() {
               instructor={each.instructor}
               students={each.students}
               uniqueKey={uniqueKey}
-              isBold={isStudentsAverage() < each.students ? 'bold' : 'normal'}
+              isBold={isStudentsAverage() > each.students ? 'bold' : 'normal'}
             />
           </div>
         );
