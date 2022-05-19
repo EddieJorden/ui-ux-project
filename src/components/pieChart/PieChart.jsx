@@ -79,14 +79,8 @@ function PieChart(props) {
     arc
       .append('path')
       .attr('d', arcGenerator)
-      // eslint-disable-next-line no-underscore-dangle
       .on('click', handleClick)
       .style('fill', (_, i, d) => {
-        console.log('color = ', colorScale(i));
-        // eslint-disable-next-line no-underscore-dangle
-        console.log('course = ', d[i].__data__.data.course);
-        // eslint-disable-next-line no-underscore-dangle
-        console.log('students = ', d[i].__data__.data.students);
         dispatch(setPieFooterArray({
           color: colorScale(i),
           course: d[i].__data__.data.course,
