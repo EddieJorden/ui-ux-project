@@ -29,13 +29,19 @@ General guidelines
 - Host the application to your choice of provider( Heroku, AWS, Azure, etc).
 - Once finished please send us the GitHub repository and the application URL.
 
-LightHouse Results
+
+~LightHouse Results~
 
 Desktop Results:
-
 ![UI:UX Lighthouse Desktop Results](/public/UI:UX_Lighthouse_Desktop_Results.png)
 
 Mobile Results:
-
 ![UI:UX Lighthouse Mobile Results](/public/UI:UX_Lighthouse_Mobile_Results.png)
 
+~ScreenShots~
+
+Desktop:
+![UI:UX Screenshot Desktop](/public/UI%3AUX_screenshot.png)
+
+Mobile:
+![UI:UX Screenshot Mobile](/public/UI%3AUX_screenshot_mobile.png)
