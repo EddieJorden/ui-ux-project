@@ -30,6 +30,8 @@ General guidelines
 - Once finished please send us the GitHub repository and the application URL.
 
 LightHouse Results
+Desktop Lighthouse Rating: 96
+[Desktop Lighthouse Rating] (UI:UX_Lighthouse_Desktop_Results.png)
 
-![Alt UI:UX Lighthouse Desktop Results](/public/UI:UX_Lighthouse_Desktop_Results)
+Mobile Lighthouse Rating: 72
 
