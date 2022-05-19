@@ -31,7 +31,8 @@ General guidelines
 
 LightHouse Results
 Desktop Lighthouse Rating: 96
-[Desktop Lighthouse Rating] (UI:UX_Lighthouse_Desktop_Results.png)
+
+[ALT Desktop Lighthouse Rating] (/UI:UX_Lighthouse_Desktop_Results.png)
 
 Mobile Lighthouse Rating: 72
 
