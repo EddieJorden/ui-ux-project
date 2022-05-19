@@ -1,6 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
 import './App.css';
-import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { setFilterData, selectFilter } from './components/pieChart/pieChartSlice';
@@ -11,89 +10,18 @@ import GridComponent from './components/gridComponent/GridComponent';
 import TopBar from './components/topBarComponent/TopBar';
 import PieFooter from './components/pieFooterComponent/PieFooter';
 import GridTitle from './components/gridTitle/GridTitle';
-
-const StyledAppDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-`;
-
-const StyledComponentWindow = styled.div`
-  background-color: white;
-  color: black;
-  box-shadow: 5px 5px 10px;
-  border-radius: 10px;
-  display: flex;
-
-  @media only screen and (max-width: 1096px) {
-    width: 100vw
-  }
-`;
-
-const StyledRadioButtonDiv = styled.div`
-  text-align: left;
-  display: flex;
-  margin-left: 30px;
-  margin-bottom: 30px;
-`;
-
-const StyledPieChartDiv = styled.div`
-  height: 100%;
-`;
-
-const StyledBodyContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const StyledBody = styled.div`
-  max-height: 100%;
-  min-height: 100%;
-  display: flex;
-  justify-content: space-between;
-
-  @media only screen and (max-width: 1096px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center
-  }
-`;
-
-const StyledGridDiv = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0px 30px
-`;
-
-const StyledPieInformationdiv = styled.div`
- font-size: 14px;
- height: 100%;
- display:flex;
- flex-direction: column;
- justify-content: start;
-  margin: 30px 0px;
-`;
-
-const GridTitleContainer = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-end
-`;
-
-const PieFooterContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+import {
+  StyledAppDiv,
+  StyledComponentWindow,
+  StyledRadioButtonDiv,
+  StyledBodyContainer,
+  StyledBody,
+  StyledGridDiv,
+  GridContainer,
+  StyledPieInformationdiv,
+  PieFooterContainer,
+  TopBarContainer,
+} from './styledAppComponents';
 
 function App() {
   const { data, isLoading } = useGetSampleDataQuery('data');
@@ -114,13 +42,10 @@ function App() {
           <StyledBodyContainer>
             <StyledBody>
 
-              <StyledPieChartDiv>
-                <div style={{
-                  fontSize: '42px', textAlign: 'left', margin: '15px', padding: '8px', borderRadius: '5px',
-                }}
-                >
+              <div style={{ height: '100%' }}>
+                <TopBarContainer>
                   <TopBar />
-                </div>
+                </TopBarContainer>
                 <StyledRadioButtonDiv>
                   <FilterButtons />
                 </StyledRadioButtonDiv>
@@ -134,12 +59,12 @@ function App() {
                     <PieFooter />
                   </StyledPieInformationdiv>
                 </PieFooterContainer>
-              </StyledPieChartDiv>
+              </div>
 
               <StyledGridDiv>
-                <GridTitleContainer>
+                <GridContainer>
                   <GridTitle />
-                </GridTitleContainer>
+                </GridContainer>
                 <GridComponent />
               </StyledGridDiv>
 
