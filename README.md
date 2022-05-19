@@ -32,25 +32,25 @@ visible only after the user chooses a course. Show the number of students' figur
 
 ## LightHouse Results:
 
-## Desktop Results:
+### Desktop Results:
 ![UI:UX Lighthouse Desktop Results](/public/UI:UX_Lighthouse_Desktop_Results.png)
 
-## Mobile Results:
+### Mobile Results:
 ![UI:UX Lighthouse Mobile Results](/public/UI:UX_Lighthouse_Mobile_Results.png)
 
-## ScreenShots:
+### ScreenShots:
 
-## Desktop:
+### Desktop:
 ![UI:UX Screenshot Desktop](/public/UI%3AUX_screenshot.png)
 
-## Mobile:
+### Mobile:
 ![UI:UX Screenshot Mobile](/public/UI%3AUX_screenshot_mobile_280px.png)
 
 
 ## Instalation:
 
 
-How to run a react app from a github repository.
+### How to run a react app from a github repository.
 [Setting up a Project from Github](https://www.pluralsight.com/guides/setting-up-a-react-project-from-github)
 
 ## Dependencies:
@@ -63,7 +63,7 @@ node,
 d3,
 cors
 
-You will need to run the provided mock endpoint endpoint.js in Node.
+### You will need to run the provided mock endpoint endpoint.js in Node.
 
 
 	node endpoint.js
@@ -119,4 +119,4 @@ For more information or support please visit.
 
  Design, Architect, Engineer and Q&A
 
-  Eddie Moger
+ ### Eddie Moger
