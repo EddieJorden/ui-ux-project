@@ -92,7 +92,7 @@ npm start
 
 This app recieves an array of objects and delivers that data to the pie chart.
 
-You can then filter the items of the pie chart with the radio buttons
+You can then filter the items of the pie chart with the radio buttons.
 
 You can also click on a slice of the pie to get extra details in the form of a grid.
 
