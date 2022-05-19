@@ -4,13 +4,16 @@
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import GridLineComponent from './GridLineComponent';
-import { selectInstructorsArray } from '../pieChart/pieChartSlice';
+import { selectInstructorsArray, selectSelectedCourseColor } from '../pieChart/pieChartSlice';
 
 const GridComponentDiv = styled.div`
+padding: 13px;
+border-radius: 5px;
 `;
 
 function GridComponent() {
   const filteredData = useSelector(selectInstructorsArray);
+  const color = useSelector(selectSelectedCourseColor);
   let uniqueKey = 0;
 
   const isStudentsAverage = () => {
@@ -27,7 +30,7 @@ function GridComponent() {
   };
 
   return (
-    <GridComponentDiv>
+    <GridComponentDiv style={{ backgroundColor: color }}>
       {filteredData.map((each) => {
         uniqueKey += 1;
         return (

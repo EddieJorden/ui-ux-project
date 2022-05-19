@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { selectCourseFilter } from '../pieChart/pieChartSlice';
 
 const GridTitleContainer = styled.div`
-  fontSize:  42px;
-
+  font-size: 24px;
 `;
 
 function GridTitle() {

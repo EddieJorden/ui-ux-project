@@ -1,8 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
-import { selectSelectedCourseColor } from '../pieChart/pieChartSlice';
 
 const GridLine = styled.div`
 display: flex;
@@ -27,12 +25,10 @@ function GridLineComponent(props) {
     year, course, instructor, students, uniqueKey, isBold,
   } = props;
 
-  const color = useSelector(selectSelectedCourseColor);
-
   const backgroundColor = () => {
     if (uniqueKey % 2 === 0) {
       return '#ffffff';
-    } return color;
+    } return 'grey';
   };
 
   return (
