@@ -109,7 +109,7 @@ function App() {
 
               <StyledPieChartDiv>
                 <div style={{
-                  fontSize: '42px', textAlign: 'left', margin: '30px',
+                  fontSize: '42px', textAlign: 'left', margin: '15px', padding: '8px', borderRadius: '5px',
                 }}
                 >
                   <TopBar />

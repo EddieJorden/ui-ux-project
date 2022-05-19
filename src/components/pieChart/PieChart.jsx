@@ -3,7 +3,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import * as d3 from 'd3';
-import { selectCoursesArray, setCourseFilter, setGridData } from './pieChartSlice';
+import {
+  selectCoursesArray, setCourseFilter, setGridData, setSelectedCourseColor,
+} from './pieChartSlice';
 
 function PieChart(props) {
   const {
@@ -16,8 +18,11 @@ function PieChart(props) {
   const handleClick = (d) => {
     // eslint-disable-next-line no-underscore-dangle
     const data = d.target.__data__.data.course;
+    const color = d.path[0].style.fill;
+    console.log('d', d.path[0].style.fill);
     // eslint-disable-next-line no-underscore-dangle
     dispatch(setCourseFilter(data));
+    dispatch(setSelectedCourseColor(color));
     dispatch(setGridData());
   };
 
