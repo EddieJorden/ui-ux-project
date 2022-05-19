@@ -2,7 +2,7 @@
 
 ## Description:
 
-Welcome to Amber Kinetics Inc's UI/UX assessment challenge. We hope you find this assessment interesting, and maybe even fun!
+### Welcome to Amber Kinetics Inc's UI/UX assessment challenge. We hope you find this assessment interesting, and maybe even fun!
 
 The app is a single-page application with dynamic content. The screen consists of the following:
 1. A radio button group that allows the user to filter the data by year.
