@@ -10,8 +10,10 @@ const pieChartSlice = createSlice({
     filteredData: [],
     coursesArray: [],
     instructorsArray: [],
+    pieFooterArray: [],
     selectedCourse: '',
     selectedCourseColor: '',
+
   },
 
   reducers: {
@@ -125,11 +127,20 @@ const pieChartSlice = createSlice({
     setSelectedCourseColor(state, action) {
       state.selectedCourseColor = action.payload;
     },
+    setPieFooterArray(state, action) {
+      state.pieFooterArray.push(action);
+    },
   },
 });
 
 export const {
-  setFilter, setFilterData, updateFilter, setCourseFilter, setGridData, setSelectedCourseColor,
+  setFilter,
+  setFilterData,
+  updateFilter,
+  setCourseFilter,
+  setGridData,
+  setSelectedCourseColor,
+  setPieFooterArray,
 } = pieChartSlice.actions;
 export const selectFilterData = (state) => state.pieChart.filteredData;
 export const selectFilter = (state) => state.pieChart.filter;
@@ -137,5 +148,6 @@ export const selectCoursesArray = (state) => state.pieChart.coursesArray;
 export const selectCourseFilter = (state) => state.pieChart.selectedCourse;
 export const selectInstructorsArray = (state) => state.pieChart.instructorsArray;
 export const selectSelectedCourseColor = (state) => state.pieChart.selectedCourseColor;
+export const selectPieFooterArray = (state) => state.pieChart.pieFooterArray;
 
 export default pieChartSlice.reducer;

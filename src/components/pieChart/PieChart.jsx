@@ -1,10 +1,11 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-use-before-define */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import * as d3 from 'd3';
 import {
-  selectCoursesArray, setCourseFilter, setGridData, setSelectedCourseColor,
+  selectCoursesArray, setCourseFilter, setGridData, setSelectedCourseColor, setPieFooterArray,
 } from './pieChartSlice';
 
 function PieChart(props) {
@@ -80,21 +81,32 @@ function PieChart(props) {
       .attr('d', arcGenerator)
       // eslint-disable-next-line no-underscore-dangle
       .on('click', handleClick)
-      .style('fill', (_, i) => colorScale(i))
+      .style('fill', (_, i, d) => {
+        console.log('color = ', colorScale(i));
+        // eslint-disable-next-line no-underscore-dangle
+        console.log('course = ', d[i].__data__.data.course);
+        // eslint-disable-next-line no-underscore-dangle
+        console.log('students = ', d[i].__data__.data.students);
+        dispatch(setPieFooterArray({
+          color: colorScale(i),
+          course: d[i].__data__.data.course,
+        }));
+        return colorScale(i);
+      })
       .style('stroke', '#ffffff')
       .style('stroke-width', 0);
 
-    // Append text labels
-    arc
-      .append('text')
-      .attr('text-anchor', 'middle')
-      .attr('alignment-baseline', 'middle')
-      .text((d) => d.data.course)
-      .style('fill', (_, i) => colorScale(filteredData.length - i))
-      .attr('transform', (d) => {
-        const [x, y] = arcGenerator.centroid(d);
-        return `translate(${x}, ${y})`;
-      });
+    // // Append text labels
+    // arc
+    //   .append('text')
+    //   .attr('text-anchor', 'middle')
+    //   .attr('alignment-baseline', 'middle')
+    //   .text((d) => d.data.course)
+    //   .style('fill', (_, i) => colorScale(filteredData.length - i))
+    //   .attr('transform', (d) => {
+    //     const [x, y] = arcGenerator.centroid(d);
+    //     return `translate(${x}, ${y})`;
+    //   });
   }
 
   return <div id="pie-container" />;

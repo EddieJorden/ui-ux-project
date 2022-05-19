@@ -1,10 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import { useSelector } from 'react-redux';
-import { selectCoursesArray } from '../pieChart/pieChartSlice';
+import { selectPieFooterArray } from '../pieChart/pieChartSlice';
 
 function PieFooter() {
-  const pieData = useSelector(selectCoursesArray);
+  const pieData = useSelector(selectPieFooterArray);
 
   let uniqueKey = 1;
 
@@ -13,16 +13,16 @@ function PieFooter() {
       {pieData.map((each) => {
         uniqueKey += 1;
         return (
-          <div key={uniqueKey}>
-            <div>{each.course}</div>
-            <div>
-              <div>
-                Students:
-                <span>
-                  {' '}
-                  {each.students}
-                </span>
-              </div>
+          <div key={uniqueKey} style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{
+              width: '18px', height: '18px', backgroundColor: each.payload.color, margin: '22px',
+            }}
+            />
+            <div style={{
+              display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
+            }}
+            >
+              {each.payload.course}
             </div>
           </div>
         );
