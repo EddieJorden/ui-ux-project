@@ -117,6 +117,6 @@ For more information or support please visit.
 
 ## Authors and Acknowledgments:
 
- Design, Architect, Engineer and Q&A
+ Design, Architect, Engineer and QA
 
  ### Eddie Moger
