@@ -13,33 +13,33 @@ const FilterButtonDiv = styled.div`
 `;
 
 function FilterButtons() {
-  const dispatch = useDispatch();
-  const yearFilter = useSelector(selectFilter);
-  const buttonsArray = [{ year: 'All Years' }, { year: '2015' }, { year: '2016' }];
-  let uniqueKey = 1;
+	const dispatch = useDispatch();
+	const yearFilter = useSelector(selectFilter);
+	const buttonsArray = [{ year: 'All Years' }, { year: '2015' }, { year: '2016' }];
+	let uniqueKey = 1;
 
-  const handleClick = (e) => {
-    if (e.target.value !== yearFilter) {
-      dispatch(setFilter(e.target.value));
-      dispatch(setSelectedCourseColor('white'));
-      buttonsArray.map((button) => button.clicked = true);
-    }
-  };
+	const handleClick = (e) => {
+		if (e.target.value !== yearFilter) {
+			dispatch(setFilter(e.target.value));
+			dispatch(setSelectedCourseColor('white'));
+			buttonsArray.map((button) => button.clicked = true);
+		}
+	};
 
-  return (
-    <FilterButtonDiv>
-      <div style={{ display: 'flex' }}>
-        {buttonsArray.map((each) => {
-          uniqueKey += 1;
-          return (
-            <form key={uniqueKey} onChange={handleClick}>
-              <FilterButton year={each.year} />
-            </form>
-          );
-        })}
-      </div>
-    </FilterButtonDiv>
-  );
+	return (
+		<FilterButtonDiv>
+			<div style={{ display: 'flex' }}>
+				{buttonsArray.map((each) => {
+					uniqueKey += 1;
+					return (
+						<form key={uniqueKey} onChange={handleClick}>
+							<FilterButton year={each.year} />
+						</form>
+					);
+				})}
+			</div>
+		</FilterButtonDiv>
+	);
 }
 
 export default FilterButtons;

@@ -21,24 +21,24 @@ justify-content: center;
 `;
 
 function GridLineComponent(props) {
-  const {
-    year, course, instructor, students, uniqueKey, isBold,
-  } = props;
+	const {
+		year, course, instructor, students, uniqueKey, isBold,
+	} = props;
 
-  const backgroundColor = () => {
-    if (uniqueKey % 2 === 0) {
-      return '#ffffff';
-    } return 'grey';
-  };
+	const backgroundColor = () => {
+		if (uniqueKey % 2 === 0) {
+			return '#ffffff';
+		} return 'grey';
+	};
 
-  return (
-    <GridLine style={{ backgroundColor: backgroundColor() }}>
-      <div className="year" style={{ width: '66px' }}>{!year ? 'loading' : year}</div>
-      <div className="course" style={{ width: '180px' }}>{!course ? 'loading' : course}</div>
-      <div style={{ width: '100px' }}>{!instructor ? 'laoding' : instructor}</div>
-      <div style={{ width: '100px', fontWeight: isBold }}>{!students ? 'students' : students}</div>
-    </GridLine>
-  );
+	return (
+		<GridLine style={{ backgroundColor: backgroundColor() }}>
+			<div className="year" style={{ width: '66px' }}>{!year ? 'loading' : year}</div>
+			<div className="course" style={{ width: '180px' }}>{!course ? 'loading' : course}</div>
+			<div style={{ width: '100px' }}>{!instructor ? 'laoding' : instructor}</div>
+			<div style={{ width: '100px', fontWeight: isBold }}>{!students ? 'students' : students}</div>
+		</GridLine>
+	);
 }
 
 export default GridLineComponent;

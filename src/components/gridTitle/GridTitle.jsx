@@ -8,13 +8,13 @@ const GridTitleContainer = styled.div`
 `;
 
 function GridTitle() {
-  const gridTitle = useSelector(selectCourseFilter);
+	const gridTitle = useSelector(selectCourseFilter);
 
-  return (
-    <GridTitleContainer>
-      {gridTitle || ''}
-    </GridTitleContainer>
-  );
+	return (
+		<GridTitleContainer>
+			{gridTitle || ''}
+		</GridTitleContainer>
+	);
 }
 
 export default GridTitle;
