@@ -1,4 +1,4 @@
-# Amber Kinetics Inc UI/UX Engineer Assessment
+# UI/UX Project
 
 ## Description:
 
