@@ -3,15 +3,15 @@ import { useSelector } from 'react-redux';
 import { selectFilter } from '../pieChart/pieChartSlice';
 
 function TopBar() {
-  const year = useSelector(selectFilter);
+	const year = useSelector(selectFilter);
 
-  const currentFilter = `Students filtered by ${year}`;
+	const currentFilter = `Students filtered by ${year}`;
 
-  return (
-    <div>
-      {currentFilter}
-    </div>
-  );
+	return (
+		<div>
+			{currentFilter}
+		</div>
+	);
 }
 
 export default TopBar;

@@ -5,21 +5,21 @@ import { useSelector } from 'react-redux';
 import { selectFilter } from '../pieChart/pieChartSlice';
 
 function FilterButton(props) {
-  const { year } = props;
-  const filter = useSelector(selectFilter);
+	const { year } = props;
+	const filter = useSelector(selectFilter);
 
-  return (
-    <div style={{ marginLeft: '10px' }}>
-      <div>{year}</div>
-      <input
-        type="radio"
-        value={year}
-        name={year}
-        checked={filter === year}
-        readOnly
-      />
-    </div>
-  );
+	return (
+		<div style={{ marginLeft: '10px' }}>
+			<div>{year}</div>
+			<input
+				type="radio"
+				value={year}
+				name={year}
+				checked={filter === year}
+				readOnly
+			/>
+		</div>
+	);
 }
 
 export default FilterButton;

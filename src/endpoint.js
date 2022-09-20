@@ -12,11 +12,11 @@ const HOST = 'localhost';
 const PORT = 8888;
 
 api.get('/', (req, res) => {
-  res.send('welcome to this awesome api');
+	res.send('welcome to this awesome api');
 });
 
 api.get('/data', (req, res) => {
-  res.status(200).json(data);
+	res.status(200).json(data);
 });
 
 api.listen(PORT, () => console.log(`API running at ${HOST}:${PORT}!`));
