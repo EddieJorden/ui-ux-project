@@ -13,6 +13,7 @@ border-radius: 5px;
 
 function GridComponent() {
 	const filteredData = useSelector(selectInstructorsArray);
+	console.log({ filteredData });
 	const color = useSelector(selectSelectedCourseColor);
 	let uniqueKey = 0;
 

@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-param-reassign */
@@ -168,13 +169,11 @@ export const selectFilterData = (state) => state.pieChart.filteredData;
 export const selectFilter = (state) => state.pieChart.filter;
 export const selectCoursesArray = (state) => state.pieChart.coursesArray;
 export const selectCourseFilter = (state) => state.pieChart.selectedCourse;
-export const selectInstructorsArray = (state) => {
+export const selectInstructorsArray = (state) =>
 	state.pieChart.instructorsArray;
-};
 
-export const selectSelectedCourseColor = (state) => {
+export const selectSelectedCourseColor = (state) =>
 	state.pieChart.selectedCourseColor;
-};
 
 export const selectPieFooterArray = (state) => state.pieChart.pieFooterArray;
 
