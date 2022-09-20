@@ -18,6 +18,7 @@ export const StyledComponentWindow = styled.div`
 
 	@media only screen and (max-width: 1096px) {
 		width: 100vw;
+		justify-content: center;
 	}
 `;
 
@@ -37,7 +38,7 @@ export const StyledBodyContainer = styled.div`
 
 export const StyledBody = styled.div`
 	max-height: 100%;
-	min-height: 100%;
+
 	display: flex;
 	justify-content: space-between;
 
@@ -45,6 +46,7 @@ export const StyledBody = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		margin-top: 30px;
 	}
 `;
 
@@ -55,6 +57,10 @@ export const StyledGridDiv = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin: 0px 30px;
+
+	@media only screen and (max-width: 1096px) {
+		margin-bottom: 30px;
+	}
 `;
 
 export const GridContainer = styled.div`
