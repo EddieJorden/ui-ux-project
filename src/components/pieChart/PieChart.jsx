@@ -19,7 +19,7 @@ function PieChart(props) {
 	const handleClick = (d) => {
 		// eslint-disable-next-line no-underscore-dangle
 		const data = d.target.__data__.data.course;
-		const color = d.path[0].style.fill;
+		const color = d.target.style.fill;
 		dispatch(setCourseFilter(data));
 		dispatch(setSelectedCourseColor(color));
 		dispatch(setGridData());
